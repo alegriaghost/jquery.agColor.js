@@ -1,4 +1,4 @@
-# jquery.color.js
+# jquery.agColor.js
 
 jQuery plugin for font color setting
 
