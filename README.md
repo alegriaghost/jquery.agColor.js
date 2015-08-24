@@ -6,10 +6,10 @@ jQuery plugin for font color setting
 
 ```javascript
 // default(white)
-$('#sample').color();
+$('#sample').agColor();
 
 // font color assign
 $('p').each(function() {
-  $(this).color({"color":"#123456"});
+  $(this).agColor({"color":"#123456"});
 });
 ```
