@@ -1,0 +1,40 @@
+test("agColor test", function() {
+  "use strict";
+
+  var expect1 = 'white';
+  var expect2 = 'red';
+  var expect3 = 'blue';
+  var pattern1_1 = $('<p />').text('test1-1');
+  var pattern1_2 = $('<p style="color:blue;" />').text('test1-2');
+  var pattern1_3 = $('<font color="blue" />').text('test1-3');
+  var pattern2_1 = $('<p />').text('test1-1');
+  var pattern2_2 = $('<p style="color:blue;" />').text('test1-2');
+  var pattern2_3 = $('<font color="blue" />').text('test1-3');
+  var pattern3_1 = $('<p />').html('<span>test2-1</span>');
+  var pattern3_2 = $('<p style="color:blue;" />').html('<span>test2-2</span>');
+  var pattern3_3 = $('<font color="blue" />').html('<span>test2-3</span>');
+  var pattern3_4 = $('<p style="color:blue;" />').html('<span>test2-4</span>');
+  var pattern3_5 = $('<font color="blue" />').html('<span>test2-4</span>');
+  var pattern4_1 = $('<p />').html('<span>test2-1</span>');
+  var pattern4_2 = $('<p style="color:blue;" />').html('<span>test2-2</span>');
+  var pattern4_3 = $('<font color="blue" />').html('<span>test2-3</span>');
+  var pattern4_4 = $('<p style="color:blue;" />').html('<span>test2-4</span>');
+  var pattern4_5 = $('<font color="blue" />').html('<span>test2-4</span>');
+
+  ok($(pattern1_1).agColor().css('color') === expect1, "1_1 : " + $(pattern1_1).agColor().css('color'));
+  ok($(pattern1_2).agColor().css('color') === expect3, "1_2 : " + $(pattern1_2).agColor().css('color'));
+  ok($(pattern1_3).agColor().css('color') === expect3, "1_3 : " + $(pattern1_3).agColor().css('color'));
+  ok($(pattern2_1).agColor({"color":"red"}).css('color') === expect2, "2_1 : " + $(pattern2_1).agColor({"color":"red"}).css('color'));
+  ok($(pattern2_2).agColor({"color":"red"}).css('color') === expect3, "2_2 : " + $(pattern2_2).agColor({"color":"red"}).css('color'));
+  ok($(pattern2_3).agColor({"color":"red"}).css('color') === expect3, "2_3 : " + $(pattern2_3).agColor({"color":"red"}).css('color'));
+  ok($(pattern3_1).agColor().find('span').css('color') === expect1, "3_1 : " + $(pattern3_1).agColor().find('span').css('color'));
+  ok($(pattern3_2).agColor().find('span').css('color') === expect3, "3_2 : " + $(pattern3_2).agColor().find('span').css('color'));
+  ok($(pattern3_3).agColor().find('span').css('color') === expect3, "3_3 : " + $(pattern3_3).agColor().find('span').css('color'));
+  ok($(pattern3_4).agColor().find('span').css('color') === expect3, "3_4 : " + $(pattern3_4).agColor().find('span').css('color'));
+  ok($(pattern3_5).agColor().find('span').css('color') === expect3, "3_5 : " + $(pattern3_5).agColor().find('span').css('color'));
+  ok($(pattern4_1).agColor({"color":"red"}).find('span').css('color') === expect2, "4_1 : " + $(pattern4_1).agColor({"color":"red"}).find('span').css('color'));
+  ok($(pattern4_2).agColor({"color":"red"}).find('span').css('color') === expect3, "4_2 : " + $(pattern4_2).agColor({"color":"red"}).find('span').css('color'));
+  ok($(pattern4_3).agColor({"color":"red"}).find('span').css('color') === expect3, "4_3 : " + $(pattern4_3).agColor({"color":"red"}).find('span').css('color'));
+  ok($(pattern4_4).agColor({"color":"red"}).find('span').css('color') === expect3, "4_4 : " + $(pattern4_4).agColor({"color":"red"}).find('span').css('color'));
+  ok($(pattern4_5).agColor({"color":"red"}).find('span').css('color') === expect3, "4_5 : " + $(pattern4_5).agColor({"color":"red"}).find('span').css('color'));
+});
